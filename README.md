@@ -23,8 +23,22 @@ PS C:\Users\DoubleSine\Github\MobaXterm-Keygen> .\MobaXterm-Keygen.py "DoubleSin
 [*] File generated: C:\Users\DoubleSine\Github\MobaXterm-Keygen\Custom.mxtpro
 [*] Please move or copy the newly-generated file to MobaXterm's installation path.
 ```
-
 Then copy `Custom.mxtpro` to `C:\Program Files (x86)\Mobatek\MobaXterm`.
+
+## For Portable version using WSL to generate
+```
+mkdir /mnt/c/Users/<UserName>/Documents/My-MobaXTerm
+curl -LO https://download.mobatek.net/2152021112100754/MobaXterm_Portable_v21.5.zip
+unzip MobaXterm_Portable_v21.5.zip
+git clone https://github.com/flygon2018/MobaXterm-keygen.git
+cd MobaXterm-keygen/
+python3 MobaXterm-Keygen.py <UserName> <Version>
+mv Custom.mxtpro ../
+cd ../
+echo '[Misc]
+HomeDir="C:\Users\UserName\Documents\My-MobaXTerm"' > MobaXterm.ini
+Launch MobaXterm_Personal_[version number].exe
+```
 
 ## Screenshot
 
